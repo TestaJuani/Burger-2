@@ -1,0 +1,145 @@
+@import "../base/variables";
+@import "../base/extend";
+@import "../base/mixin";
+
+
+
+.container-titulo-menu{
+    @include flexing(flex,center);
+    margin-top: $margen-entre-section;
+    margin-bottom: $margen-entre-section;
+    text-align: center;
+    .titulos-secciones-menu{
+        width: 60%;
+        @include titulos-subtitulos(2rem,("Neutra-Bold", sans-serif),800);     
+        opacity: 0.8;
+        padding-bottom: 2em;
+        border-bottom: 2px solid black;
+        @media screen and (max-width:468px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width:320px) {
+            font-size: 15px;
+            
+        }
+      }
+}
+
+
+
+.container-hamburguesas-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $margen-entre-section;
+
+    .container-card{
+        display: flex;
+        flex-direction: row; 
+        width: 70%;
+        height: 10em;
+        margin: 2em;
+        box-shadow: 0px 0px 31px 4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 31px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 31px 4px rgba(0,0,0,0.75);
+        border-radius: 1em;
+        transition: 1s;
+
+        &:hover{
+            transform: translateY(8px);
+        }
+        .container-img{
+            display: flex;
+            align-items: center;
+            width:25%;
+          .img-card{
+           border-radius: 1em;
+           width: 100%;
+           height: 12em;
+            }
+            @media screen and (max-width:920px){
+                width: 28%;
+            }
+            @media screen and (max-width:720px){
+                width: 32%;
+            }
+            @media screen and (max-width:620px) {
+                width: 35%;
+            }
+            @media screen and (max-width:548px) {
+                width: 40%;
+            }
+        }
+        .card-body{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            div {            
+            .titulo-card{
+                @include titulos-subtitulos(1.3rem,("Neutra-Bold", sans-serif),700);
+                @media screen and (max-width:720px){
+                    @include titulos-subtitulos(1rem,("Neutra-Bold", sans-serif),700);
+                }
+                @media screen and (max-width:420px){
+                    @include titulos-subtitulos(0.8rem,("Neutra-Bold", sans-serif),700);
+                }
+            }
+            p{
+                @media screen and (max-width:720px){
+                    @include titulos-subtitulos(15px,("Neutra-Bold", sans-serif),400);
+                }
+                @media screen and (max-width:420px){
+                    @include titulos-subtitulos(10px,("Neutra-Bold", sans-serif),400);
+                }
+            }
+            
+        }
+        .container-boton-card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .valor{
+                @include titulos-subtitulos(0.8rem,("Neutra-Bold", sans-serif),800);
+            }
+            .boton{
+                @include titulos-subtitulos(0.8rem,("Neutra-Bold", sans-serif),500);
+                border: 1px solid black;
+                padding: 5px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
+            
+        }
+        @media screen and (max-width:920px){
+            width: 72%;
+        }
+        @media screen and (max-width:920px){
+            width: 68%;
+        }
+        @media screen and (max-width:620px) {
+            width: 65%;
+        }
+        @media screen and (max-width:568px) {
+            width: 60%;
+        }
+      }
+      @media screen and (max-width:920px){
+          width: 90%;
+      }
+      @media screen and (max-width:720px){
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:720px){
+    padding: 1em;
+}
+}
+
